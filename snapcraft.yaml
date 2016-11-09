@@ -1,0 +1,17 @@
+name: simple-daemon
+version: "1.0"
+summary: one simple daemon snap
+description: |
+    This is a simple daemon snap that output content to one file
+confinement: devmode
+
+apps:
+ simple:
+   command: bin/echodate
+   daemon: simple
+   plugs: [home]
+
+parts:
+ glue:
+  plugin: dump
+  source: .

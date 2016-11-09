@@ -1,0 +1,8 @@
+#!/bin/sh
+
+while true; do
+	echo $(date) >> $HOME/datetime.txt
+	echo "HOME is: $HOME\n"
+	echo "SNAP_DATA: $SNAP_DATA\n"
+	sleep 10s
+done
